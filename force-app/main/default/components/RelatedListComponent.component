@@ -1,0 +1,19 @@
+<apex:component controller="getAllCandidates" >
+    
+   <apex:pageBlock >
+       <apex:pageBlockTable value="{!opportunities}" var="o" >
+            <apex:column value="{!o.First_Name__c}"/>
+            <apex:column value="{!o.Last_Name__c}"/> 
+            <apex:column value="{!o.Age__c}"/>
+            <apex:column value="{!o.Email__c}"/>
+            <apex:column value="{!o.Date_of_Birth__c}"/>
+           	<apex:column value="{!o.Jobs__c}"/>
+        
+            
+        	</apex:pageBlockTable>
+        <!--      SELECT First_Name__c, Last_Name__c,Age__c,Email__c,
+                     Date_of_Birth__c,Jobs__c,
+                     APEX_Country__c FROM APEX_Candidate__c -->
+       
+    </apex:pageBlock>
+</apex:component>

@@ -1,0 +1,53 @@
+<apex:page controller="getallJobs" >
+    <apex:pageBlock >
+		<apex:pageBlockSection title="Job Details"  >
+            <apex:pageBlockTable value="{!opportunities}" var="o" >
+            <apex:column value="{!o.Name__c}"/>
+            <apex:column value="{!o.Number_of_Positions__c}"/>
+            <apex:column value="{!o.Job_Types__c}"/> 
+            <apex:column value="{!o.Manager__c}"/>
+        	</apex:pageBlockTable>
+        </apex:pageBlockSection>  
+    </apex:pageBlock>
+   
+         <c:RelatedListComponent2 >
+        
+        
+    </c:RelatedListComponent2>
+  
+   
+    
+  
+</apex:page>
+        <!--
+   		<apex:pageBlockSection title="Job Details"  >
+            <apex:pageBlockTable value="{!opportunities}" var="o" >
+            <apex:column value="{!o.Name__c}"/>
+            <apex:column value="{!o.Job_Types__c}"/> 
+            <apex:column value="{!o.Active__c}"/>
+            <apex:column value="{!o.Expires_On__c}"/>
+            <apex:column value="{!o.Salary_Offered__c}"/>
+           	<apex:column value="{!o.Number_of_Positions__c}"/>
+            <apex:column value="{!o.Total_Applicants__c}"/>
+            
+        	</apex:pageBlockTable>
+        </apex:pageBlockSection>
+        -->
+        
+        <!--
+        <apex:pageBlockSection title="Related List">
+            <c:RelatedListComponent >
+                
+            </c:RelatedListComponent>
+            
+        </apex:pageBlockSection>
+        <apex:pageBlockSection >
+       
+            <apex:page controller="getByJobName" >
+    
+             <c:RelatedListComponent2 ></c:RelatedListComponent2>
+    
+            </apex:page>
+	 	</apex:pageBlockSection>        
+        
+       -->

@@ -1,0 +1,34 @@
+<apex:page standardController="Job__c" >
+  <apex:form >
+  <apex:pageBlock title="My Job VF Page" mode="exit">
+  
+  <apex:pageBlockButtons >
+      <apex:commandButton value="Save" action="{!save}"/>
+  </apex:pageBlockButtons>
+  
+  <apex:pageBlockSection title="My Job VF Page" columns="1">
+      <apex:inputField value="{!Job__c.Active__c}"/>
+      <apex:inputField value="{!Job__c.Description__c}"/>
+      
+      <apex:inputField value="{!Job__c.Expires_On__c}"/>
+      <apex:inputField value="{!Job__c.Name__c}"/> 
+      <apex:inputField value="{!Job__c.Hired_Applicants__c}"/>
+      <apex:inputField value="{!Job__c.Job_Types__c}"/>
+      <apex:inputField value="{!Job__c.Certification_Required__c}"/>
+      <apex:inputField value="{!Job__c.Qualification_Required__c}"/>
+      <apex:inputField value="{!Job__c.Required_Skills__c}"/>
+      <apex:inputField value="{!Job__c.Manager__c}"/>
+      <apex:inputField value="{!Job__c.Number_of_Positions__c}"/>
+      
+      <apex:inputField value="{!Job__c.Salary_Offered__c}"/>
+     
+      <apex:inputField value="{!Job__c.Total_Applicants__c}"/>
+      
+  </apex:pageBlockSection>
+  
+  
+  
+  
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

@@ -1,0 +1,129 @@
+<apex:page controller="JobCustomConstroller" id="pg">
+    <apex:stylesheet value="{!$Resource.JobRegistrationCust}"/>
+    <apex:includeScript value="{!$Resource.ErrorFunctionJob}"/>
+    
+    <apex:pageBlock >
+        
+        <p> Job Wizard</p>
+        <hr/>
+        
+        
+        
+        <apex:image value="{! $Resource.enzigmaLogo1}" id="logo"/>
+        <u><h4>Job Registration</h4></u>
+        <br/>
+        <h3>Step - 1</h3>
+        
+    </apex:pageBlock>
+    
+    
+    
+    
+    <div class="column" id="div">   
+        <apex:form id="form1">
+            <table id="table">
+               
+                <tr >
+                    <td> <label> <span class="span">*</span>Job Type :</label> </td>
+                    
+                    <td> <apex:inputField id="jobtype" value="{!jobobj.Job_Types__c}"/></td>
+                </tr>
+                <tr >
+                    <td> <label> <span class="span">*</span>Job Description :</label> </td>
+                    
+                    <td> <apex:inputTextarea id="jobDesc" /></td>
+                </tr>
+                
+                <tr>
+                    <td> <label> <span class="span">*</span>Number of Positions :</label> </td>
+                    <td> <apex:inputField id="noofpos" value="{!jobobj.Number_of_Positions__c}"/></td>
+                </tr>
+                <tr>
+                    <td> <label> <span class="span">*</span>Available Till :</label> </td>
+                    <td> <apex:inputField id="exprireOn" value="{!jobobj.Expires_On__c}"/></td>
+                </tr>
+                 <tr>
+                    <td> <label> <span class="span">*</span>Manager :</label> </td>
+                    <td>   <apex:inputField id="jmanager" value="{!jobobj.Manager__c}"/></td>
+                </tr>
+                
+            </table>
+            
+            <apex:commandButton id="button" onclick="showErrors()" value="Save the filed" action="{!save}"/>
+            <!-- <button class="button" onclick="return showErrors()"> Save &amp;  Next</button>  -->
+        </apex:form>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="column">
+        <apex:form id="form2">
+            <table>
+               
+                
+                <tr>
+                    <td> <label>Salary Offered :</label> </td>
+                    <td>   <apex:inputField id="jmanager" value="{!jobobj.Salary_Offered__c}"/></td>
+                </tr>
+            </table>
+        </apex:form>
+        
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    <script>
+    function showErrors() {
+        //var v=
+            // var v=document.getElementById('pg:div:form1:table:jobtype').value;
+        
+         var name = document.getElementById('pg:form1:name').value;
+         var noofpos = document.getElementById('pg:form1:noofpos').value;
+		 var jobtype = document.getElementById('pg:form1:jobtype').value;
+         var jobDesc = document.getElementById('pg:form1:jobDesc').value;
+		   
+        var exprireOn = document.getElementById('pg:form1:exprireOn').value;
+        
+        var jmanager = document.getElementById('pg:form2:jmanager').value;  
+        
+        if((name==''))
+            {
+                alert("Please Enter Name");
+           	}
+        if((noofpos==''))
+            {
+                alert("Enter Number of Position");
+            }
+        if((jobtype==''))
+            {
+                alert("Select Job Type");
+            }
+        if((exprireOn==''))
+            {
+                alert("Enter Expity Date");
+            }
+        if((jmanager==''))
+            {
+                alert("Please Select Manager");
+            }
+        
+       
+        
+        	
+        
+        
+    }
+    </script>
+    
+    
+</apex:page>

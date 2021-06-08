@@ -1,0 +1,150 @@
+<apex:page controller="CandidateCustromClass" id="pg" standardStylesheets="false">
+    <!-- <apex:stylesheet value="{!$Resource.CandidateRegCustCss}"/> -->
+    <apex:stylesheet value="{!URLFOR($Resource.StaticResourceZip, 'Static/CSS/CandidateRegCss.css')}"/>
+    
+   
+    
+    <apex:pageBlock >
+        
+        <p > Candidate Wizard chnage</p>
+        <hr/>
+        
+        
+        
+       <!-- <apex:image value="{! $Resource.enzigmaLogo1}" id="logo"/> -->
+        
+        <apex:image url="{!URLFOR($Resource.StaticResourceZip, 'Static/Images/enzigmalogo.png')}" id="logo"/>
+        <u><h4 class="section1">Candidate Registration</h4></u>
+        <br/>
+        <h3 class="section1">Step - 1</h3>
+        
+    </apex:pageBlock>
+    
+    
+    
+    <apex:form id="form1">
+    <div class="column" id="div">   
+        
+            <table id="table">
+                <tr>
+                    <td><span class="span" >*</span><label for="txtName">First Name :</label></td>
+                    <td> <apex:inputField id="fname" value="{!candidateObject.First_Name__c}"/></td>
+                </tr>
+                <tr >
+                    <td> <label> <span class="span">*</span>Last Name:</label> </td>
+                    
+                    <td> <apex:inputField id="lname" value="{!candidateObject.Last_Name__c}"/></td>
+                </tr>
+              
+                
+                <tr>
+                    <td> <label> <span class="span">*</span>Email :</label> </td>
+                    <td> <apex:inputField id="email" value="{!candidateObject.Email__c}"/></td>
+                </tr>
+                <tr>
+                    <td> <label> <span class="span">*</span>Job:</label> </td>
+                    <td> <apex:inputField id="job" value="{!candidateObject.Jobs__c}"/></td>
+                </tr>
+                 
+               
+            </table>
+            
+            <apex:commandButton id="button"   styleClass="button" onclick="showErrors()" value="Save the filed" action="{!save}"/>
+            <!-- <button class="button" onclick="return showErrors()"> Save &amp;  Next</button>  -->
+       
+    </div>
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    <div class="column">
+       
+            <table>
+                <!--
+                <tr>
+                    <td> <label> Application Date :</label> </td>
+                    <td> <apex:inputField value="{!candidateObject.Application_Date__c}"/></td>
+                </tr>
+                 <tr>
+                    <td> <label> Date of Birth :</label> </td>
+                    <td>   <apex:inputField value="{!candidateObject.Date_of_Birth__c}"/></td>
+                </tr>
+				-->
+                <tr>
+                    <td> <label> <span class="span">*</span>Expected Salary :</label> </td>
+                    <td> <apex:inputField id="salary" value="{!candidateObject.Expected_Salary__c}"/></td>
+                </tr>
+                 <tr>
+                    <td> <label> <span class="span">*</span>Status :</label> </td>
+                    <td>   <apex:inputField id="status" value="{!candidateObject.Status__c}"/></td>
+                </tr>
+               
+            </table>
+      
+        
+    </div>
+        </apex:form>
+        
+    
+    
+    
+    
+    
+    
+    
+    <script>
+    function showErrors() {
+        //var v=
+            // var v=document.getElementById('pg:div:form1:table:jobtype').value;
+        
+         var fname = document.getElementById('pg:form1:fname').value;
+         var lname = document.getElementById('pg:form1:lname').value;
+		 var email = document.getElementById('pg:form1:email').value;
+         var job = document.getElementById('pg:form1:job').value;
+		   
+   
+        
+        var salary = document.getElementById('pg:form1:salary').value; 
+        var status = document.getElementById('pg:form1:status').value;
+        
+        if((fname==''))
+            {
+                alert("Please Enter First Name");
+           	}
+        if((lname==''))
+            {
+                alert("Please Enter Last Name");
+            }
+        if((email==''))
+            {
+                alert("Enter Email");
+            }
+       
+        if((job==''))
+            {
+                alert("Please Select Job");
+            }
+        if((salary==''))
+            {
+                alert("Please Enter Salary");
+            }
+         if((status==''))
+            {
+                alert("Please Select Status");
+            }
+        
+       
+        
+        	
+        
+        
+    }
+    </script>
+    
+    
+</apex:page>

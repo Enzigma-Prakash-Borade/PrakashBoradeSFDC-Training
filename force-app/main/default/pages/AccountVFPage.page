@@ -1,0 +1,5 @@
+<apex:page controller="AccountVFController" >
+    <c:RelatedListComponent records="{!records}" fields="{fields}">
+    </c:RelatedListComponent>
+    
+</apex:page>

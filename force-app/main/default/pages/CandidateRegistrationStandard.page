@@ -1,0 +1,28 @@
+<apex:page standardController="APEX_Candidate__c">
+    
+    
+    
+ <apex:form >
+ <apex:pageBlock title="My Candidate" mode="edit">
+ 
+     <apex:pageBlockButtons >
+         <apex:commandButton value="save" action="{!save}"/>
+     </apex:pageBlockButtons>
+     
+     <apex:pageBlockSection title="My Candidate Bock" columns="1">
+     <apex:inputField value="{!APEX_Candidate__c.Salutation__c}"/>
+         <apex:inputField value="{!APEX_Candidate__c.First_Name__c}"/>
+         <apex:inputField value="{!APEX_Candidate__c.Last_Name__c}"/>
+         <apex:inputField value="{!APEX_Candidate__c.APEX_Country__c}"/>
+         <apex:inputField value="{!APEX_Candidate__c.APEX_State__c}"/>
+         <apex:inputField value="{!APEX_Candidate__c.Status__c}"/>
+         <apex:inputField value="{!APEX_Candidate__c.Email__c}"/>
+         <apex:inputField value="{!APEX_Candidate__c.Application_Date__c}"/>
+         <apex:inputField value="{!APEX_Candidate__c.Expected_Salary__c}"/>
+         <apex:inputField value="{!APEX_Candidate__c.Jobs__c}"/>
+         <apex:inputField value="{!APEX_Candidate__c.Full_Name__c}"/>
+     </apex:pageBlockSection>
+     
+ </apex:pageBlock>
+ </apex:form>
+</apex:page>

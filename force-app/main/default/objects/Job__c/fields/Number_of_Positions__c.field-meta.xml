@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Positions__c</fullName>
+    <description>Number of Positions  filed</description>
+    <externalId>false</externalId>
+    <inlineHelpText>you can add up to 10 digits</inlineHelpText>
+    <label>Number of Positions</label>
+    <precision>10</precision>
+    <required>true</required>
+    <scale>0</scale>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

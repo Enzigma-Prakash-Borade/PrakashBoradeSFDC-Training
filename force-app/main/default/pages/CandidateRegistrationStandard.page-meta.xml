@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <availableInTouch>true</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>Create following VF pages which allow to create and update a record of the given object using Standard controller
+This if for Candidate Controller</description>
+    <label>CandidateRegistrationStandard</label>
+</ApexPage>

@@ -1,0 +1,6 @@
+<apex:page >
+    <h1>
+        This is my page
+    </h1>
+    <c:MyComponent1 ></c:MyComponent1>
+</apex:page>

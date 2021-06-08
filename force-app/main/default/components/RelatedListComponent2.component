@@ -1,0 +1,40 @@
+<apex:component controller="getByJobName">
+  
+   <apex:pageBlock >
+        <apex:pageBlockSection title="Related List">
+             <apex:repeat var="item" value="{!opportunities}">
+            		<tr>
+                        <td>Full Name</td>
+                        <td>Id</td>
+                        <td>Email</td>
+            		</tr>
+
+                    <td>{!item.Candidates__r[0].Full_Name__c}</td>
+             		<td>{!item.Candidates__r[0].id}</td>
+             		<td>{!item.Candidates__r[0].Email__c}</td>
+                 <tr>
+                        <td>Full Name</td>
+                        <td>Id</td>
+                        <td>Email</td>
+            		</tr>
+
+                    <td>{!item.Candidates__r[1].Full_Name__c}</td>
+             		<td>{!item.Candidates__r[1].id}</td>
+             		<td>{!item.Candidates__r[1].Email__c}</td>
+                 
+                 
+                 <tr>
+                        <td>Full Name</td>
+                        <td>Id</td>
+                        <td>Email</td>
+            		</tr>
+
+                    <td>{!item.Candidates__r[3].Full_Name__c}</td>
+             		<td>{!item.Candidates__r[3].id}</td>
+             		<td>{!item.Candidates__r[3].Email__c}</td>
+                 	
+        </apex:repeat> 
+
+    </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:component>

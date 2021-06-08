@@ -1,0 +1,44 @@
+<apex:page controller="JobCustomConstroller" standardStylesheets="false">
+    
+    <!--<apex:stylesheet    value="{! $Resource.JobRegistrationCustomCSS }"/> 
+    <apex:stylesheet value="{!$Resource.JobRegistrationCust}"/>
+
+--> 
+    
+    
+   
+  <apex:form >
+      <apex:pageBlock title="Hello  {!$User.FirstName}">
+      <apex:pageBlockButtons >
+       <apex:commandButton action="{!save}" value="Save"/>
+      </apex:pageBlockButtons>
+          <h1>
+              Hello world
+          </h1>
+      
+     
+      <apex:pageBlockSection title="My Job VF Page Using Custom Controller" columns="1">
+      <apex:inputField value="{!jobobj.Active__c}"/>
+      <apex:inputField value="{!jobobj.Description__c}"/>
+      
+      <apex:inputField value="{!jobobj.Expires_On__c}"/>
+      <apex:inputField value="{!jobobj.Name__c}"/> 
+      <apex:inputField value="{!jobobj.Hired_Applicants__c}"/>
+      <apex:inputField value="{!jobobj.Job_Types__c}"/>
+      <apex:inputField value="{!jobobj.Certification_Required__c}"/>
+      <apex:inputField value="{!jobobj.Qualification_Required__c}"/>
+      <apex:inputField value="{!jobobj.Required_Skills__c}"/>
+      <apex:inputField value="{!jobobj.Manager__c}"/>
+      <apex:inputField value="{!jobobj.Number_of_Positions__c}"/>
+      
+      <apex:inputField value="{!jobobj.Salary_Offered__c}"/>
+     
+      <apex:inputField value="{!jobobj.Total_Applicants__c}"/>
+      
+  </apex:pageBlockSection>
+      
+     
+      
+      </apex:pageBlock>
+  </apex:form>
+</apex:page>

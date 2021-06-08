@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CheckNoOfJobs</fullName>
+    <active>true</active>
+    <description>check no of jobs greater than 0</description>
+    <errorConditionFormula>$Setup.Validation_HandlerJob__c.CheckNoOfJob__c &amp;&amp;  $ObjectType.Job__c.Fields.Number_of_Positions__c !=0</errorConditionFormula>
+    <errorMessage>The No of job not be 0</errorMessage>
+</ValidationRule>

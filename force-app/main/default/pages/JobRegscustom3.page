@@ -1,0 +1,97 @@
+<apex:page id="pg" controller="JobCustomConstroller" >
+    
+    
+     <apex:stylesheet value="{!$Resource.JobCustom2css}"/>
+  
+
+    <apex:pageBlock >
+
+    	<p id="jobWizard"> Job Wizard</p>
+        <hr/>
+            
+      
+    
+        <apex:image value="{! $Resource.enzigmaLogo1}" id="logo"/>
+        <u><h4>Job Registration</h4></u>
+        <br/>
+        <h3>Step - 1</h3>
+        
+
+    </apex:pageBlock>
+
+    
+   
+		<column class="column1">
+             <apex:form id="fm" Styleclass="fmd" >
+		<table>
+        
+        <apex:pageBlock id="pb">
+            <apex:pageBlockSection id="pbs1">
+               <apex:outputLabel >Name</apex:outputLabel>
+                <apex:inputText id="jname" />
+            </apex:pageBlockSection>
+            
+            
+             <apex:pageBlockSection id="pbs2">
+               <apex:outputLabel >Job Type</apex:outputLabel>
+                <apex:inputText id="jtype" />
+            </apex:pageBlockSection>
+            
+             <apex:pageBlockSection id="pbs3">
+               <apex:outputLabel >Job Description</apex:outputLabel>
+                <apex:inputTextarea id="jdisc" />
+            </apex:pageBlockSection>
+            
+             <apex:pageBlockSection id="pbs4">
+               <apex:outputLabel >No Of Position</apex:outputLabel>
+                <apex:inputText id="jposition" />
+            </apex:pageBlockSection>
+            
+             <apex:pageBlockSection id="pbs5">
+               <apex:outputLabel >Available Till</apex:outputLabel>
+                <apex:inputText id="javailable" />
+            </apex:pageBlockSection>
+            
+			 <apex:pageBlockSection id="pbs6">
+           <apex:outputLabel >Manager</apex:outputLabel>
+            <apex:inputText id="jmanager"/> 
+            </apex:pageBlockSection>
+
+            
+            
+             
+        </apex:pageBlock>
+       
+        <apex:commandButton value="click" onclick="getError()"/>
+   
+            
+         </table>
+                  </apex:form>
+      </column>
+    
+  
+  
+    
+    <script>
+    	function getError()
+    		{
+              	var name = document.getElementById('pg:fm:pb:pbs1:jname').value;
+              	var type = document.getElementById('pg:fm:pb:pbs2:jtype').value;
+                var dseccrir = document.getElementById('pg:fm:pb:pbs3:jdisc').value;
+                var dseccrir1 = document.getElementById('pg:fm:pb:pbs4:jposition').value;
+                var dseccrir2 = document.getElementById('pg:fm:pb:pbs5:javailable').value;
+                var dseccrir3 = document.getElementById('pg:fm:pb:pbs6:jmanager').value;
+                
+               
+                
+               if(( document.getElementById('pg:fm:pb:pbs6:jmanager').value==''))
+                   {
+                       alert("Hello enter val")
+                   }
+                 
+            }
+    
+  
+    </script>
+    
+</apex:page>

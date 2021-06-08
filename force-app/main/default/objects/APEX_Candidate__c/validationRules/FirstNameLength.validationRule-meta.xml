@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FirstNameLength</fullName>
+    <active>true</active>
+    <description>Allow to enter first name only 10 char</description>
+    <errorConditionFormula>$Setup.Validation_Handler__c.EnalbeCandidateValidation__c &amp;&amp;  $ObjectType.APEX_Candidate__c.Fields.First_Name__c !=&apos;Mr&apos;</errorConditionFormula>
+    <errorMessage>cannot enter first name as Mr</errorMessage>
+</ValidationRule>
